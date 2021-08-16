@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 discord = "*"
 python-dotenv = "*"
+mingus = "*"
 
 [dev-packages]
 
