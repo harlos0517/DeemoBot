@@ -25,6 +25,9 @@ def translate_text( text):
 #print(out_put)
 
 
+#以上為函式設計
+
+
 #from translate import Translator
 import discord
 import os
@@ -33,23 +36,45 @@ from os import getenv
 from dotenv import load_dotenv
 
 
+#以上為import module
 
-'''用translate module翻譯成中文'''
+
+
 load_dotenv()
 TOKEN = getenv('TOKEN')
 
 bot_1 = discord.Client()
-bot = commands.Bot(command_prefix='!Dd')
+
+
+
 
 @bot.event
 async def on_message(message):
     input = message.content
-    if message.author == bot.user:
-        return
-   
-    translator = translate_text(input.replace("!Dd"," "))
+    #if message.author == bot.user:
+        #return
+    if message.content == prefix + "dic":
+        if message.content.count(" ") > 5:
+            await message.send("最多五個字")
+            return
+
+        else:
+            translator = translate_text(input.replace("!Dd"," "))
+
+            try:
+                link = 'https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/'  +input.replace("!D"," ")
+                record_dict = {}
+                record_dict[translator] = input
+                await message.channel.send(translator + "  " + "link")
+
+            except:
+                await message.send("failure")
+
+
     
-    link = 'https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/'  +input.replace("!D"," ")
-    await message.channel.send(translator + "  " + "link")
+    
+
+
+
 
 bot.run(TOKEN)
