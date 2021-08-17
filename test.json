@@ -1,0 +1,331 @@
+{
+  "name": "score",
+  "value": [{
+      "name": "bar",
+      "value": [{
+          "name": "timesig",
+          "value": [{
+              "name": "NUMBER",
+              "value": "4"
+            },
+            {
+              "name": "NUMBER",
+              "value": "4"
+          }]
+        },
+        {
+          "name": "part",
+          "value": [{
+              "name": "longnote",
+              "value": [{
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "keysig",
+                      "value": [{
+                          "name": "NUMBER",
+                          "value": "3"
+                        },
+                        {
+                          "name": "SHARP",
+                          "value": "#"
+                      }]
+                    },
+                    {
+                      "name": "clef",
+                      "value": [{
+                          "name": "CLEF_SIG",
+                          "value": "G"
+                        },
+                        {
+                          "name": "OCTAVES",
+                          "value": "8va"
+                        },
+                        {
+                          "name": "PLUSES_MINUSES",
+                          "value": "+"
+                      }]
+                    },
+                    {
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "C-"
+                          }]
+                      }]
+                  }]
+                },
+                {
+                  "name": "WS",
+                  "value": "   "
+                },
+                {
+                  "name": "LONG",
+                  "value": "-"
+              }]
+          }]
+        },
+        {
+          "name": "part",
+          "value": [{
+              "name": "shortnote",
+              "value": [{
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "C4"
+                          }]
+                      }]
+                  }]
+                },
+                {
+                  "name": "BEAM",
+                  "value": "="
+              }]
+          }]
+        },
+        {
+          "name": "part",
+          "value": [{
+              "name": "shortnote",
+              "value": [{
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "C4"
+                          }]
+                      }]
+                  }]
+                },
+                {
+                  "name": "BEAM",
+                  "value": "_"
+              }]
+          }]
+        },
+        {
+          "name": "part",
+          "value": [{
+              "name": "shortnote",
+              "value": [{
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "C4"
+                          }]
+                      }]
+                  }]
+              }]
+          }]
+        },
+        {
+          "name": "part",
+          "value": [{
+              "name": "shortnote",
+              "value": [{
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "C4"
+                          }]
+                      }]
+                  }]
+              }]
+          }]
+        },
+        {
+          "name": "BARLINE",
+          "value": "|"
+      }]
+    },
+    {
+      "name": "bar",
+      "value": [{
+          "name": "part",
+          "value": [{
+              "name": "notegroup",
+              "value": [{
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "Eb4"
+                          }]
+                      }]
+                  }]
+                },
+                {
+                  "name": "BEAM",
+                  "value": "_"
+                },
+                {
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "Eb4"
+                          }]
+                      }]
+                  }]
+                },
+                {
+                  "name": "BEAM",
+                  "value": "_"
+                },
+                {
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "Eb4"
+                          }]
+                      }]
+                  }]
+              }]
+          }]
+        },
+        {
+          "name": "part",
+          "value": [{
+              "name": "notegroup",
+              "value": [{
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "Eb4"
+                          }]
+                      }]
+                  }]
+                },
+                {
+                  "name": "BEAM",
+                  "value": "="
+                },
+                {
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "Eb4"
+                          }]
+                      }]
+                  }]
+                },
+                {
+                  "name": "BEAM",
+                  "value": "_"
+                },
+                {
+                  "name": "chord_with_sig",
+                  "value": [{
+                      "name": "chord",
+                      "value": [{
+                          "name": "note",
+                          "value": [{
+                              "name": "PITCH",
+                              "value": "Eb4"
+                          }]
+                      }]
+                  }]
+              }]
+          }]
+        },
+        {
+          "name": "part",
+          "value": [{
+              "name": "tuplet",
+              "value": [{
+                  "name": "NUMBER",
+                  "value": "3"
+                },
+                {
+                  "name": "notegroup",
+                  "value": [{
+                      "name": "chord_with_sig",
+                      "value": [{
+                          "name": "chord",
+                          "value": [{
+                              "name": "note",
+                              "value": [{
+                                  "name": "PITCH",
+                                  "value": "Eb4"
+                              }]
+                          }]
+                      }]
+                    },
+                    {
+                      "name": "BEAM",
+                      "value": "_"
+                    },
+                    {
+                      "name": "chord_with_sig",
+                      "value": [{
+                          "name": "chord",
+                          "value": [{
+                              "name": "note",
+                              "value": [{
+                                  "name": "PITCH",
+                                  "value": "Eb4"
+                              }]
+                          }]
+                      }]
+                    },
+                    {
+                      "name": "BEAM",
+                      "value": "_"
+                    },
+                    {
+                      "name": "chord_with_sig",
+                      "value": [{
+                          "name": "chord",
+                          "value": [{
+                              "name": "note",
+                              "value": [{
+                                  "name": "PITCH",
+                                  "value": "Eb4"
+                              }]
+                          }]
+                      }]
+                  }]
+              }]
+          }]
+        },
+        {
+          "name": "BARLINE",
+          "value": "|||"
+      }]
+  }]
+}

@@ -1,0 +1,69 @@
+score : bar*
+
+bar : timesig? part* BARLINE
+
+
+timesig: "$T{" ( NUMBER "/" NUMBER
+               | COMMON_TIME
+               | COMMON_HALF
+               | DIGIT DIGIT ) "}"
+
+part : notepart | tuplet
+
+
+tuplet : NUMBER "(" notepart+ ")"
+
+?notepart : shortnote | longnote | notegroup
+
+
+shortnote : chord_with_sig BEAM?
+
+longnote : chord_with_sig (WS LONG)*
+
+notegroup : (chord_with_sig BEAM BEAM?)* chord_with_sig
+
+
+chord : (note | "[" note+ "]")
+
+chord_with_sig : (clef | keysig)* chord DOT*
+
+
+clef: "$C{" CLEF_SIG OCTAVES? PLUSES_MINUSES? "}"
+
+keysig: "$K{" ( PITCHNAME
+              | NATURAL
+              | NUMBER? (SHARP | FLAT)
+              | (SHARP | FLAT) ~ 1..14 ) "}"
+
+
+note : TIE? (PITCH | PITCH_LP)
+
+
+CLEF_SIG       : /[GFCPT]/
+PLUSES_MINUSES : /\++|\-+/
+OCTAVES        : /(8|15|22)v[ab]/
+COMMON_TIME    : "C"
+COMMON_HALF    : "C|"
+
+BEAM           : /(\_[3-9]?|\=){1,2}/
+BARLINE        : ":|||:" |  "|||" |  ":||" | "||:" | "||" | "|"
+
+DOT            : "."
+REST           : "r"
+TIE            : "+"
+LONG           : "-"
+
+PITCHNAME      : /[A-G]([#xb]|"bb")?/
+PITCH          : /[A-G]([#xnb]|"bb")?[\-0-9]/
+PITCH_LP       : /[a-g]([`'"]*|,*)/
+
+SHARP          : "#"
+DOUBLE_SHAR    : "x"
+FLAT           : "b"
+DOUBLE_FLAT    : "bb"
+NATURAL        : "n"
+
+NUMBER         : /[1-9][0-9]*/
+DIGIT          : /[1-9]/
+WS             : /[ \t\n\f\r]+/
+%ignore WS
