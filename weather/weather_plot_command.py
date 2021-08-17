@@ -10,14 +10,10 @@ from os import remove as rm
 
 async def plot(ctx: Ctx):
     try:
-        if plot_test_2.get_plot():
-            with open('plot.png', 'rb') as f:
-                picture = discord.File(f)
-                await ctx.send(file=picture)
-                rm('plot.png')
-        else:
-            pass
-            # await ctx.send("failed")
+        await plot_test_2.get_plot()
+        with open('plot.png', 'rb') as f:
+            picture = discord.File(f)
+            await ctx.send(file=picture)
+            rm('plot.png')
     except:
-        pass
-        # await ctx.send("failed")
+        await ctx.send("failed")

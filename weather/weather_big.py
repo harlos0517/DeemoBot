@@ -7,8 +7,6 @@ import numpy as np
 import pandas as pd
 import urllib.request
 import json
-from pandas.plotting import table
-import matplotlib.pyplot as plt
 
 jsonres = "https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-B0053-069?Authorization=CWB-D83A7BB1-9603-410A-97D0-D413CA8369AB&downloadType=WEB&format=JSON"
 response = urllib.request.urlopen(jsonres)
@@ -195,11 +193,6 @@ def get_fram(arg: str):
     r = {"a": "小風口停車場", "b": "鳶峰停車場", "c": "台大梅峰實驗農場", "d": "新中橫塔塔加停車場",
          "e": "武陵農場", "f": "大雪山國家森林遊樂區", "g": "陽明山國家公園小油坑停車場", "h": "陽明山國家公園擎天崗"}
     a = fradict[r[arg]]
-    # ax = plt.subplot(111, frame_on=False) # no visible frame
-    # ax.xaxis.set_visible(False)  # hide the x axis
-    # ax.yaxis.set_visible(False)  # hide the y axis
-    # table(ax, a)  # where df is your data frame
-    # plt.savefig('a_styled.png')
     dfi.export(a, 'a_styled.png')
 
 

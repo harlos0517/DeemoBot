@@ -35,12 +35,10 @@ async def get_plot():
 # 重要 不能刪
 async def plot(ctx: Ctx, arg: str):
     try:
-        if get_plot():
-            with open('plot.png', 'rb') as f:
-                picture = dc.File(f)
-                await ctx.send(file=picture)
-                rm('plot.png')
-        else:
-            await ctx.send("failed")
+        await get_plot()
+        with open('plot.png', 'rb') as f:
+            picture = dc.File(f)
+            await ctx.send(file=picture)
+            rm('plot.png')
     except:
         await ctx.send("failed")
